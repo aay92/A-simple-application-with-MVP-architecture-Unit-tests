@@ -15,22 +15,29 @@ protocol MainViewProtocol: AnyObject {
 ///выход/output
 protocol MainViewPresenterProtocol: AnyObject {
     ///иницилизатор захватывает ссылку на вью
-    init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     func getComments()
     var comments: [Comment]? { get set }
+    func tapOnTheComment(comment: Comment?)
 }
 
 class MainPresenter: MainViewPresenterProtocol {
     
+    
     var comments: [Comment]?
     weak var view: MainViewProtocol?
+    var router: RouterProtocol?
     let networkService: NetworkServiceProtocol!
     
-    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkService = networkService
+        self.router = router
         ///При инициилизации начинаем грузить комменты
         getComments()
+    }
+    func tapOnTheComment(comment: Comment?) {
+        router?.showDetail(comment: comment)
     }
     
     func getComments() {

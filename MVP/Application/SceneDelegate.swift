@@ -17,10 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let mainVC = ModuleBuilder.createMainModule()
-        let root = UINavigationController(rootViewController: mainVC)
+//        let mainVC = AssemblyModuleBuilder.createMainModule()
+//        let root = UINavigationController(rootViewController: mainVC)
         window?.makeKeyAndVisible()
-        window?.rootViewController = root
+//        window?.rootViewController = root
 
     }
 
