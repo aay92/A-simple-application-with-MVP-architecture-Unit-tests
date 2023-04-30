@@ -12,7 +12,6 @@ protocol RouterMain {
     var assemblyBuilder: AssemblyBuilderProtocol? { get set }
 }
 
-
 protocol RouterProtocol: RouterMain{
     ///initialViewController - Функия для выбора вью контроллера с которого будет запуск
     func initialViewController()
@@ -46,9 +45,9 @@ class Router: RouterProtocol {
     }
     
     func popToRoot() {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    
+        if let navigationController = navigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
+    }    
 }
 

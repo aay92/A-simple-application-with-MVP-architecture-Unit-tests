@@ -16,6 +16,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         presener.setComment()
     }
+     
+    @IBAction func tapAction(_ sender: Any) {
+        presener.tap()
+    }
 }
 
 extension DetailViewController: DetailViewProtocol {

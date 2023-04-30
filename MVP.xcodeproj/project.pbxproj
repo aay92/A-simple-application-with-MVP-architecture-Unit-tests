@@ -26,6 +26,7 @@
 		5B7774FF29FBBC8C0054CF9C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7774FD29FBBC8C0054CF9C /* DetailViewController.swift */; };
 		5B77750029FBBC8C0054CF9C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7774FE29FBBC8C0054CF9C /* DetailViewController.xib */; };
 		5B77750229FD89030054CF9C /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77750129FD89030054CF9C /* RouterProtocol.swift */; };
+		5B77750429FEEE250054CF9C /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77750329FEEE250054CF9C /* RouterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		5B7774FD29FBBC8C0054CF9C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5B7774FE29FBBC8C0054CF9C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		5B77750129FD89030054CF9C /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		5B77750329FEEE250054CF9C /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B45509329FEF2AA00666513 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5B77750129FD89030054CF9C /* RouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		5B7774A129F9A59F0054CF9C = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +129,7 @@
 		5B7774AC29F9A59F0054CF9C /* MVP */ = {
 			isa = PBXGroup;
 			children = (
-				5B77750129FD89030054CF9C /* RouterProtocol.swift */,
+				5B45509329FEF2AA00666513 /* Router */,
 				5B7774EA29F9AFEE0054CF9C /* Builder */,
 				5B7774E529F9AC070054CF9C /* Application */,
 				5B7774E129F9ABA70054CF9C /* MainModul */,
@@ -138,6 +148,7 @@
 			children = (
 				5B7774C429F9A5A10054CF9C /* MVPTests.swift */,
 				5B7774EF29F9B6490054CF9C /* MainPresenerTest.swift */,
+				5B77750329FEEE250054CF9C /* RouterTest.swift */,
 			);
 			path = MVPTests;
 			sourceTree = "<group>";
@@ -388,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7774F029F9B6490054CF9C /* MainPresenerTest.swift in Sources */,
+				5B77750429FEEE250054CF9C /* RouterTest.swift in Sources */,
 				5B7774C529F9A5A10054CF9C /* MVPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

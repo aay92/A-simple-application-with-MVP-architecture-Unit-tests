@@ -18,7 +18,7 @@ class AssemblyModuleBuilder: AssemblyBuilderProtocol {
         ///Внидрение зависимостей (экземпляры создаются не внутри сущностей а снаружи)
         let view = MainViewController()
         let networkService = NetworkService()
-        let presenter = MainPresenter(view: view, networkService: networkService)
+        let presenter = MainPresenter(view: view, networkService: networkService, router: router)
         
         view.presenter = presenter
         return view
@@ -28,7 +28,7 @@ class AssemblyModuleBuilder: AssemblyBuilderProtocol {
         ///Внидрение зависимостей (экземпляры создаются не внутри сущностей а снаружи)
         let view = DetailViewController()
         let networkService = NetworkService()
-        let presenter = DetailPresenter(view: view, networkService: networkService, comment: comment)
+        let presenter = DetailPresenter(view: view, networkService: networkService, router: router, comment: comment)
         
         view.presener = presenter
         return view
